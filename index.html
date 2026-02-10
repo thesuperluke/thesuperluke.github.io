@@ -11,6 +11,24 @@
       font-family: Arial, Helvetica, sans-serif;
       background-color: #ffffff;
       color: #0a3d91;
+      overflow-x: hidden;
+    }
+
+    /* Decorative Background Image */
+    .decor-image {
+      position: fixed;
+      bottom: 2.5vh;
+      right: 2.5vw;
+      width: min(700px, 50vw, 100vh);
+      opacity: 0.5;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Ensure content sits above decorative image */
+    nav, main {
+      position: relative;
+      z-index: 1;
     }
 
     a {
@@ -25,6 +43,7 @@
       align-items: center;
       padding: 20px 40px;
       border-bottom: 2px solid #e6e6e6;
+      background-color: #ffffff;
     }
 
     .nav-right {
@@ -43,7 +62,7 @@
     /* Main content */
     main {
       max-width: 1100px;
-      margin: 80px auto;
+      margin: 120px auto;
       padding: 0 40px;
       display: flex;
       align-items: center;
@@ -61,16 +80,22 @@
       border-radius: 8px;
     }
 
+
     .intro h1 {
       margin-top: 0;
+      padding-top: 2.5vh;
       font-size: 2.5rem;
+      text-shadow: 0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF;
     }
 
     .intro p {
       font-size: 1.1rem;
       line-height: 1.6;
-      max-width: 500px;
+      max-width: 400px;
+      text-shadow: 0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF,0px 0px 15px #FFFFFF ;
     }
+
+    
 
     /* Responsive */
     @media (max-width: 800px) {
@@ -83,11 +108,24 @@
         width: 220px;
         height: 220px;
       }
+      
+      .decor-image {
+
+        opacity: 0;
+
+      }
+
+
     }
+    /* Add this AFTER */
+
   </style>
 </head>
 
 <body>
+
+  <!-- Decorative Image -->
+
 
   <nav>
     <div class="nav-left">
@@ -101,17 +139,23 @@
     </div>
   </nav>
 
+  <img 
+    src="images/technical-drawing.png" 
+    alt="" 
+    class="decor-image"
+  >
   <main>
-    <img src="images/profile.jpg" alt="Photo of me" class="profile-pic"/>
+    <img src="images/profile.png" alt="Photo of me" class="profile-pic"/>
 
     <div class="intro">
-      <h1>Hi, I'm [Your Name]</h1>
+      <h1>Hi, I'm Lucas Hutton</h1>
       <p>
-        I’m an engineering student with interests in design, analysis,
+        I’m an engineer with interests in design, analysis,
         and building practical solutions to real-world problems.
         This site showcases my projects, hobbies, and professional experience.
       </p>
     </div>
+      
   </main>
 
 </body>
