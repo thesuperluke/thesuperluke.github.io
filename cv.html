@@ -103,6 +103,7 @@
   .cv-contact {
     margin-top: 10px;
     font-size: 0.95rem;
+    word-break: break-word;
   }
 
   .cv-section {
@@ -156,6 +157,45 @@
     color: white;
   }
 
+  /* ===== MOBILE OPTIMISATION ===== */
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  main {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  .cv-page {
+    padding: 25px 20px;
+    margin: 20px 0;
+  }
+
+  .cv-entry-date {
+    float: none;
+    display: block;
+    margin-top: 3px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+
 </style>
 </head>
 
@@ -187,7 +227,7 @@
 <div class="cv-header">
 <h2>Lucas Hutton</h2>
 <div class="cv-contact">
-lucashutton03@gmail.com | www.linkedin.com/in/lucashutton-engineering | (+44) 7827 918893
+lucashutton03@gmail.com | www.linkedin.com/in/lucashutton-engineering | (+44)&nbsp7827&nbsp918893
 </div>
 </div>
 
